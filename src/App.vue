@@ -73,7 +73,7 @@ const bindShake = () => {
                     shakeCount
                 });
 
-                if (thresholdCount > 30 + (target / l) * 60 && shakeCount >= 100 + (target / l) * 150) {
+                if (thresholdCount > 30 + (target / l) * 50 && shakeCount >= 100 + (target / l) * 120) {
                     window.navigator.vibrate?.(200);
                     showMoonCake.value = target;
                     shakeCount = 0;
