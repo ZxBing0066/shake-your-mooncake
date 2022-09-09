@@ -125,6 +125,10 @@ const bindShake = () => {
                 <div>
                     <h2>{{ moonCakes[showMoonCake].name }}</h2>
                     <img :src="'/' + moonCakes[showMoonCake].name + '.webp'" />
+                    <p>
+                        哇，你抽中了 <span class="highlight">{{ moonCakes[showMoonCake].name }}</span
+                        >。
+                    </p>
                     <p>{{ moonCakes[showMoonCake].feature }}</p>
                     <p>{{ moonCakes[showMoonCake].desc }}</p>
                 </div>
