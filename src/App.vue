@@ -74,7 +74,7 @@ const bindShake = () => {
                 });
 
                 if (thresholdCount > 30 + (target / l) * 60 && shakeCount >= 100 + (target / l) * 150) {
-                    window.navigator.vibrate(200);
+                    window.navigator.vibrate?.(200);
                     showMoonCake.value = target;
                     shakeCount = 0;
                     const audio = document.createElement('audio');
@@ -116,7 +116,9 @@ const bindShake = () => {
         <template v-else>
             <div class="content">
                 <p>🥮 🥮 🥮 🥮 🥮 🥮 🥮 🥮 🥮 🥮 🥮 🥮</p>
-                <p>🥮 摇动手机，摇出你的本命月饼吧。🥮</p>
+                <p>摇动手机，摇出你的本命月饼吧。</p>
+                <p>如果一直摇不出，恭喜你也许抽到了稀有月饼。</p>
+                <p>加大摇一摇幅度，多坚持一会试试吧。</p>
                 <p>🥮 🥮 🥮 🥮 🥮 🥮 🥮 🥮 🥮 🥮 🥮 🥮</p>
             </div>
             <div class="dialog" v-if="showMoonCake">
